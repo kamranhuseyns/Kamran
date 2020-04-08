@@ -22,7 +22,7 @@ namespace Kamran.Web
         {
 
             services.AddTransient<KamranObjectContext>();
-            services.AddTransient<ICustomerService, CustomerService>();
+            services.AddScoped<ICustomerService, CustomerService>();
             services.AddSingleton(typeof(IRepository<>), typeof(EfRepository<>));
             services.AddMvc();
         }
